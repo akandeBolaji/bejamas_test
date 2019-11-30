@@ -37,12 +37,19 @@ export const pageQuery = graphql`
           frontmatter {
             title
             hero {
-              image
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 384, maxHeight: 371) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
               heading
               subheading
             }
-            intro {
-              description
+            logos {
+              image
+              link
             }
           }
         }
