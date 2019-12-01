@@ -43,14 +43,14 @@ exports.createPages = ({ actions, graphql }) => {
         pathName = edge.node.fields.slug;
         component = path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`);
       const id = edge.node.id;
-     /* createPage({
+      createPage({
         path: pathName,
         component,
         // additional data can be passed via context
         context: {
           id,
         },
-      }); */
+      });
     });
   });
 };
