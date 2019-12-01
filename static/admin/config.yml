@@ -9,7 +9,7 @@ collections:
   - name: 'blog'
     label: 'Blog'
     folder: 'src/pages/blog'
-    create: true
+    create: true 
     slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
       - { label: 'Template Key', name: 'templateKey', widget: 'hidden', default: 'blog-post' }
@@ -87,6 +87,19 @@ collections:
               name: 'templateKey',
               widget: 'hidden',
               default: 'product-page',
+            }
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Body', name: 'body', widget: 'markdown' }
+
+      - file: 'src/pages/blogs/index.md'
+        label: 'Blog Page'
+        name: 'blog'
+        fields:
+          - {
+              label: 'Template Key',
+              name: 'templateKey',
+              widget: 'hidden',
+              default: 'blog-page',
             }
           - { label: 'Title', name: 'title', widget: 'string' }
           - { label: 'Body', name: 'body', widget: 'markdown' }

@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import { IndexPageTemplate } from "../../templates/index-page";
 
 
 class HomePage extends React.Component {
@@ -13,7 +14,7 @@ class HomePage extends React.Component {
     const { frontmatter: home } = data.homePageData.edges[0].node;
     return (
       <Layout navbarData={navbarData}>
-        
+        <IndexPageTemplate home={home}></IndexPageTemplate>
       </Layout>
     );
   }
