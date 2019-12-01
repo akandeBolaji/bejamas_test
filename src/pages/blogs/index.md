@@ -1,4 +1,4 @@
 ---
 title: Blog
 ---
-Blog Page
+# **Blog Page**
