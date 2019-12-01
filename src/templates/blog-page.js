@@ -10,7 +10,7 @@ export function BlogPageTemplate({}) {
   )
 }
 
-BlogPostTemplate.propTypes = {}
+BlogPageTemplate.propTypes = {}
 
 function BlogPage() {
   return (
