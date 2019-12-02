@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from "prop-types";
 
 import Layout from '../components/Layout'
 
@@ -12,9 +13,10 @@ export function IndexPageTemplate({}) {
 
 IndexPageTemplate.propTypes = {}
 
-function IndexPage() {
+function IndexPage(props) {
+  console.log(props);
   return (
-    <Layout navbarData={navbarData}>
+    <Layout navbarData={props.data.navbarData}>
       <IndexPageTemplate />
     </Layout>
   )
