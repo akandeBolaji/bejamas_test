@@ -112,15 +112,8 @@ collections:
         name: "navbar"
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "navbar" }
-          - {
-              label: "Menu Items",
-              name: "menuItems",
-              widget: "list",
-              fields:
-                [
-                  { label: "Label", name: "label", widget: "string" },
-                  { label: "Link Type", name: "linkType", widget: "select", options: ["internal", "external"] },
-                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
-                ],
-            } 
-            - { label: "logo", name: "logo", widget: "image"}       
+          - { label: "First link", name: "first_link", widget: "string"}
+          - { label: "Second link", name: "second_link", widget: "string"} 
+          - { label: "Third link", name: "third_link", widget: "string"}
+          - { label: "Fourth link", name: "fourth_link", widget: "string"}
+          - { label: "logo", name: "logo", widget: "image"}       
