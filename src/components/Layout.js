@@ -1,5 +1,8 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
+import { graphql } from "gatsby";
+
+import { Navbar } from "../components/Navbar";
 
 import { useSiteMetadata } from '../lib/hooks'
 
@@ -21,9 +24,30 @@ function Layout(props) {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
       </Helmet>
+      <Navbar data={props.navbarData} />
       <main>{props.children}</main>
     </div>
   )
 }
 
+export const query = graphql`
+  fragment LayoutFragment on Query {
+    navbarData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "navbar" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            menuItems {
+              label
+              linkType
+              linkURL
+            }
+          }
+        }
+      }
+    }
+  }
+`;
+
 export default Layout
+ 
