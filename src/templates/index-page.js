@@ -14,12 +14,49 @@ IndexPageTemplate.propTypes = {}
 
 function IndexPage() {
   return (
-    <Layout>
+    <Layout navbarData={navbarData}>
       <IndexPageTemplate />
     </Layout>
   )
 }
 
-IndexPage.propTypes = {}
+IndexPage.propTypes = {
+  data: PropTypes.shape({
+    allMarkdownRemark: PropTypes.shape({
+      edges: PropTypes.array,
+    }),
+  }),
+}
 
 export default IndexPage
+
+export const pageQuery = graphql`
+  query HomePageData { 
+      allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "index-page" } } }) {
+      edges {
+        node {
+          frontmatter {
+            title
+            hero {
+              image {
+                childImageSharp {
+                  fluid(maxWidth: 384, maxHeight: 371) {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
+              heading
+              subheading
+            }
+            logos {
+              image
+              link
+            }
+          }
+        }
+      }
+    }
+  }
+  ...LayoutFragment
+`;
+
