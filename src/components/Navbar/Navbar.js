@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 import "./styles.scss";
 
 export const NavbarTemplate = ({ data }) => (
-  <nav className="navbar">
+  <nav className="navbar" role="navigation" aria-label="main navigation">
     <div className="container  navbar-container">
       {data.menuItems.length > 0 && (
         <ul className="navbar-menu">

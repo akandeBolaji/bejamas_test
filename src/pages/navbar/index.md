@@ -16,4 +16,5 @@ menuItems:
   - label: contact
     linkType: internal
     linkURL: /contact
----
+logo: /uploads/logo.svg
+--- 

@@ -122,4 +122,5 @@ collections:
                   { label: "Link Type", name: "linkType", widget: "select", options: ["internal", "external"] },
                   { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
                 ],
-            }        
+            } 
+            - { label: "logo", name: "logo", widget: "image"}       
