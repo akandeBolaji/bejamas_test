@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'
 import { graphql } from "gatsby";
 
 import { Navbar } from "../components/Navbar";
+import { Footer } from "../components/Footer";
 
 import { useSiteMetadata } from '../lib/hooks'
 
@@ -27,6 +28,7 @@ function Layout(props) {
       </Helmet>
       <Navbar data={props.navbarData} active={props.presentRoute} />
       <main>{props.children}</main>
+      <Footer data={props.footerData}></Footer>
     </div>
   )
 }
