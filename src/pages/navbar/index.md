@@ -1,6 +1,6 @@
 ---
 templateKey: navbar
-logo: /uploads/logo.svg
+logo: /uploads/logo1.svg
 firstLink: 
   name: Home
   link: /

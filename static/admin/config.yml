@@ -104,14 +104,15 @@ collections:
           - { label: 'Title', name: 'title', widget: 'string' } 
           - { label: 'Body', name: 'body', widget: 'markdown' }
           
-  - name: "navbar" 
-    label: "Navbar"
+  - name: "layout" 
+    label: "Layout"
     files:
       - file: "src/pages/navbar/index.md"
         label: "Navbar"
         name: "navbar"
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "navbar" }
+          - { label: "Logo", name: "logo", widget: "image"}
           - { 
               label: "First link", 
               name: "firstLink", 
@@ -152,4 +153,10 @@ collections:
                   { label: "link", name: "link", widget: "string" },
                 ],
             }
-         
+      - file: "src/pages/footer/index.md"
+        label: "Footer"
+        name: "footer"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "footer" }
+          - { label: "Logo", name: "logo", widget: "image"}
+          - { label: "Copyright Text", name: "copyright", widget: "string"}

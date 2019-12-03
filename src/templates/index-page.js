@@ -16,7 +16,7 @@ IndexPageTemplate.propTypes = {}
 function IndexPage(props) {
   console.log(props);
   return (
-    <Layout navbarData={props.data.navbarData} presentRoute="Home">
+    <Layout navbarData={props.data.navbarData} footerData={props.data.footerData} presentRoute="Home">
       <IndexPageTemplate />
     </Layout>
   )

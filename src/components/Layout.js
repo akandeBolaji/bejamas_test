@@ -59,6 +59,17 @@ export const query = graphql`
         }
       }
     }
+    footerData: allMarkdownRemark(filter: { frontmatter: { templateKey: { eq: "footer" } } }) {
+      edges {
+        node {
+          id
+          frontmatter {
+            logo
+            copyright
+          }
+        }
+      }
+    }
   }
 `;
 

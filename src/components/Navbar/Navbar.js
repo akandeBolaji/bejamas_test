@@ -18,15 +18,23 @@ export const NavbarTemplate = ({ data, active }) => (
       <div className="navbar-item">
         <Link className="navbar-text" to={data.firstLink.link}>
           {data.firstLink.name}
-        </Link>
-        <span class="icon">
-          <i class="fas fa-home"></i>
-        </span>
+        </Link> 
+        {active == data.firstLink.name && 
+          <span className="icon">
+            .
+          </span>
+        } 
+    
       </div>
       <div className="navbar-item">
         <Link className="navbar-text" to={data.secondLink.link}>
         {data.secondLink.name}
-        </Link>  
+        </Link> 
+        {active == data.secondLink.name && 
+          <span className="icon">
+            .
+          </span>
+        }  
       </div>
     </div>
     <div className="my-navbar-center">
@@ -38,11 +46,21 @@ export const NavbarTemplate = ({ data, active }) => (
          <Link className="navbar-text" to={data.thirdLink.link}>
         {data.thirdLink.name}
          </Link>
+         {active == data.thirdLink.name && 
+          <span className="icon">
+            .
+          </span>
+        } 
       </div>
       <div className="navbar-item">
         <Link className="navbar-text" to={data.fourthLink.link}>
         {data.fourthLink.name}
       </Link>
+      {active == data.fourthLink.name && 
+          <span className="icon">
+            .
+          </span>
+        } 
       </div>
     </div>
   </div>
@@ -63,7 +81,7 @@ const Navbar = props => {
   }
   const data = props.data.edges[0].node.frontmatter;
    console.log(data);
-  return <NavbarTemplate data={data} />;
+  return <NavbarTemplate data={data} active={props.active} />;
 };
 
 export { Navbar };
