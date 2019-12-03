@@ -15,7 +15,7 @@ BlogPageTemplate.propTypes = {}
 function BlogPage() {
   return (
     <Layout>
-      <BlogPostTemplate />
+      <BlogPageTemplate />
     </Layout>
   )
 }

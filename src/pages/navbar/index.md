@@ -1,19 +1,16 @@
 ---
 templateKey: navbar
-menuItems:
-  - label: home
-    linkType: internal
-    linkURL: /
-  - label: about
-    linkType: internal
-    linkURL: /about
-  - label: blog
-    linkType: internal
-    linkURL: /blog
-  - label: product
-    linkType: internal
-    linkURL: /products
-  - label: contact
-    linkType: internal
-    linkURL: /contact
----
+logo: /uploads/logo1.svg
+firstLink: 
+  name: Home
+  link: /
+secondLink: 
+  name: Products
+  link: /products
+thirdLink: 
+  name: Blog
+  link: /blogs
+fourthLink: 
+  name: Contact
+  link: /contact
+---  
