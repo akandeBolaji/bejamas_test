@@ -101,10 +101,10 @@ collections:
               widget: 'hidden',
               default: 'blog-page',
             }
-          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Title', name: 'title', widget: 'string' } 
           - { label: 'Body', name: 'body', widget: 'markdown' }
           
-  - name: "navbar"
+  - name: "navbar" 
     label: "Navbar"
     files:
       - file: "src/pages/navbar/index.md"
@@ -112,8 +112,44 @@ collections:
         name: "navbar"
         fields:
           - { label: "Template Key", name: "templateKey", widget: "hidden", default: "navbar" }
-          - { label: "First link", name: "first_link", widget: "string"}
-          - { label: "Second link", name: "second_link", widget: "string"} 
-          - { label: "Third link", name: "third_link", widget: "string"}
-          - { label: "Fourth link", name: "fourth_link", widget: "string"}
-          - { label: "logo", name: "logo", widget: "image"}       
+          - { 
+              label: "First link", 
+              name: "firstLink", 
+              widget: "object",
+              fields:
+                [
+                  { label: "name", name: "name", widget: "string" },
+                  { label: "link", name: "link", widget: "string" },
+                ],
+            }
+          - { 
+              label: "Second link", 
+              name: "secondLink", 
+              widget: "object",
+              fields:
+                [
+                  { label: "name", name: "name", widget: "string" },
+                  { label: "link", name: "link", widget: "string" },
+                ],
+            }
+          - { 
+              label: "Third link", 
+              name: "thirdLink", 
+              widget: "object",
+              fields:
+                [
+                  { label: "name", name: "name", widget: "string" },
+                  { label: "link", name: "link", widget: "string" },
+                ],
+            }
+          - { 
+              label: "Fourth link", 
+              name: "fourthLink", 
+              widget: "object",
+              fields:
+                [
+                  { label: "name", name: "name", widget: "string" },
+                  { label: "link", name: "link", widget: "string" },
+                ],
+            }
+         

@@ -1,8 +1,16 @@
 ---
 templateKey: navbar
 logo: /uploads/logo.svg
-first_link: /
-second_link: /products
-third_link: /blogs
-fourth_link: /contact
---- 
+firstLink: 
+  name: Home
+  link: /
+secondLink: 
+  name: Products
+  link: /products
+thirdLink: 
+  name: Blog
+  link: /blogs
+fourthLink: 
+  name: Contact
+  link: /contact
+---  

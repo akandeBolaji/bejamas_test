@@ -20,12 +20,12 @@ function Layout(props) {
         <meta name="description" content={description} />
 
         <meta name="theme-color" content="#fff" />
-
+ 
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
       </Helmet>
-      <Navbar data={props.navbarData} />
+      <Navbar data={props.navbarData} active={props.presentRoute} />
       <main>{props.children}</main>
     </div>
   )
@@ -38,10 +38,22 @@ export const query = graphql`
         node {
           id
           frontmatter {
-            menuItems {
-              label
-              linkType
-              linkURL
+            logo
+            firstLink {
+              name
+              link
+            }
+            secondLink {
+              name
+              link
+            }
+            thirdLink {
+              name
+              link
+            }
+            fourthLink {
+              name
+              link
             }
           }
         }
