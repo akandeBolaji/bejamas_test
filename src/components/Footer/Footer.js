@@ -5,7 +5,7 @@ import "./styles.scss";
 
 export const FooterTemplate = ({ data }) => (
   <footer className="foot">
-       <span class="helper"></span><img src={data.logo} alt="logo"/>
+       <span className="helper"></span><img src={data.logo} alt="logo"/>
       <div className="foot-copyright">{data.copyright}</div>
   </footer>
 );
