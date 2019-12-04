@@ -29,9 +29,11 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    // Filter out the navbar and blogs so we don't create pages for those
+    // Filter out the navbar, footer and blogs so we don't create pages for those
     const postOrPage = result.data.allMarkdownRemark.edges.filter(edge => {
       if (edge.node.frontmatter.templateKey === "navbar") {
+        return false;
+      } else if (edge.node.frontmatter.templateKey === "footer") {
         return false;
       } else {
         return !Boolean(edge.node.fields.slug.match(/^\/blog\/.*$/));
@@ -43,14 +45,14 @@ exports.createPages = ({ actions, graphql }) => {
         pathName = edge.node.fields.slug;
         component = path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`);
       const id = edge.node.id;
-     /* createPage({
+      createPage({
         path: pathName,
         component,
         // additional data can be passed via context
         context: {
           id,
         },
-      }); */
+      });
     });
   });
 };

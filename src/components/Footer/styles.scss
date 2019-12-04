@@ -1,0 +1,34 @@
+@import "../../styles/bulma.scss";
+
+.foot {
+    width: 100%;
+    bottom: 0% !important;
+    height: 50px;
+    white-space: nowrap;
+    background: #4296CB 0% 0% no-repeat padding-box;
+    opacity: 1;
+    display: block;
+
+    &-copyright {
+        display: inline-block;
+        font: Bold 14px/18px Montserrat;
+        color: #FFFFFF;
+        opacity: 1;
+        padding-left: 5%;
+    }
+}
+
+.helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    padding-left: 12%;
+}
+
+img {
+    background: transparent 0% 0% no-repeat padding-box;
+    vertical-align: middle;
+    max-height: 50px;
+    max-width: 36px;
+    opacity: 1;
+}

@@ -1,6 +1,7 @@
 ---
 templateKey: index-page
 title: Home
+button: Read more
 hero:
   heading: Start New… Today!
   image: /uploads/56256.jpg
@@ -19,16 +20,16 @@ intro:
   heading: Lorem ipsum something
   image: /uploads/56217.jpg
 logos:
-  - image: /uploads/logo.svg
-    link: 'https://example.com'
-  - image: /uploads/logo.svg
+  - image: /uploads/component.svg
+    link: 'https://exampl.com'
+  - image: /uploads/component.svg
     link: /about
-  - image: /uploads/logo.svg
-    link: 'https://example.com'
-  - image: /uploads/logo.svg
-    link: 'https://example.com'
-  - image: /uploads/logo.svg
-    link: 'https://example.com'
+  - image: /uploads/component.svg
+    link: 'https://exampe.com'
+  - image: /uploads/component.svg
+    link: 'https://examle.com'
+  - image: /uploads/component.svg
+    link: 'https://exmple.com'
 ---
 
  

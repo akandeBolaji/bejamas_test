@@ -1,0 +1,59 @@
+@import "../../styles/bulma.scss";
+
+@media screen and (min-width: 1088px) {
+  .my-navbar {
+    display: block !important;
+  }
+  .my-navbar .navbar-brand {
+    display: none;
+  }
+  #my-navbar-menu {
+    width: 600px;
+    margin: 0 auto;
+  }
+  #my-navbar-menu>div {
+    flex: 1;
+  }
+  #my-navbar-menu>div>div {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 1088px) { 
+    .my-navbar-center {
+        display: none
+    }
+    .navbar-menu.is-active {
+        height: 100%;
+        min-width: 100%;
+        position: fixed;
+        padding-top: 35%;
+        padding-left: 10%;
+    }
+ 
+}
+
+.navbar {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 2px 12px #0000001D;
+    opacity: 1;
+
+  &-text {
+    font: SemiBold 20px/24px Montserrat;
+    letter-spacing: 0;
+    color: #394E5D;
+    opacity: 1;
+  }
+
+  &-burger {
+      margin-left: 7% !important;
+  }
+
+  &-center {
+    display: block;
+    margin-right: 43%;
+    margin-left: auto
+  }
+
+}

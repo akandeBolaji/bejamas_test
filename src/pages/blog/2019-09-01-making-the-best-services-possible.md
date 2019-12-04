@@ -3,7 +3,8 @@ templateKey: blog-post
 title: Making the best services possible
 date: 2019-09-01T15:00:00.000Z
 featuredimage: /uploads/pool.jpg
-excerpt:
+excerpt: >-
+  Vestibulum mollis ut odio non ornare. Duis turpis quam, venenatis consequat tortor vel, egestas mollis arcu.
 ---
 
 Vivamus pellentesque sagittis dignissim. Aliquam a nibh rutrum, lobortis lectus congue, tempus magna. Praesent interdum libero non ipsum vehicula mattis. Sed rhoncus purus vitae euismod interdum. Duis fermentum pharetra scelerisque. Phasellus lectus nunc, lacinia quis felis sed, vulputate luctus eros. Suspendisse nec luctus nibh. Praesent rhoncus sodales lacus, elementum ornare purus. Nullam id nulla ac velit varius malesuada sed sed enim. Integer vel magna quis massa bibendum commodo non in ipsum. Mauris porttitor ex eu laoreet pulvinar. Curabitur nec erat augue.

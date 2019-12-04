@@ -1,0 +1,193 @@
+@import "./bulma.scss";
+
+@media screen and (min-width: 1088px) {
+    .mybutton {
+        margin-top: 50px;
+        margin-bottom: 150px;
+        text-align: center;
+    }
+
+    .mybutton-text {
+        font: SemiBold 14px/27px Montserrat;
+        letter-spacing: 0;
+        color: #4285BC;
+        opacity: 1;
+    }
+
+    button {
+        background: #FFFFFF 0% 0% no-repeat padding-box !important;
+        border: 1px solid #3D86BF !important;
+        border-radius: 32px !important;
+    }
+
+    button:hover {
+        background: #4285BC 0% 0% no-repeat padding-box !important;
+        border-radius: 32px !important;
+        .mybutton-text {
+            color: #FFFFFF;
+        }
+    }
+
+    .myhero-heading {
+        margin-top: 10%;
+        margin-left: 18%;
+        }
+        
+    .myhero-image img {
+        margin-right: 5%;
+        margin-top: 5%;
+        max-height: 371px;;
+        max-width: 384px;
+    } 
+
+    .myintro-image img {
+        max-height: 370px;;
+        max-width: 236px;
+        margin-left: 45%;
+    } 
+
+ .myintro-description {
+    margin: 4%;
+  }
+
+    .mylogo {
+        background: #F5F8FA 0% 0% no-repeat padding-box;
+        opacity: 1;
+    }
+
+    .myintro {
+        max-height: 420px;
+    }
+    .level {
+        margin-top: 80px;
+        height: 100px;
+        background: #F5F8FA 0% 0% no-repeat padding-box;
+        opacity: 1;
+    }
+
+    .scrolling-wrapper {
+        display: none !important;
+    }
+}
+
+.level-image {
+    width: 50px;
+    font-size: 100px;
+    height: 44px;
+    background: transparent 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.myintro-title {
+    text-align: center;
+    font: Bold 32px/39px Montserrat;
+    letter-spacing: 0;
+    color: #394E5D;
+    opacity: 1;
+    //margin: 2%;
+}
+
+
+@media screen and (max-width: 1088px) {
+    .mybutton {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    .mybutton-text {
+        font: SemiBold 14px/27px Montserrat;
+        letter-spacing: 0;
+        color: #4285BC;
+        opacity: 1;
+    }
+
+    button {
+        background: #FFFFFF 0% 0% no-repeat padding-box !important;
+        border: 1px solid #3D86BF !important;
+        border-radius: 32px !important;
+    }
+
+    button:hover {
+        background: #4285BC 0% 0% no-repeat padding-box !important;
+        border-radius: 32px !important;
+        .mybutton-text {
+            color: #FFFFFF;
+        }
+    }
+
+    .myhero-heading {
+        margin-left: 10%;
+        margin-top: 15%;
+    }
+    .myhero-image img {
+        margin-left: 7%;
+        max-height: 253px;;
+        max-width: 262px;
+        margin-top: 6%;
+    }
+    .myintro-image, .myintro-image img {
+        display: none !important;
+    }
+
+    .level {
+        display: none !important;
+    }
+
+    .myintro-title {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .myintro-description {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .scrolling-wrapper {
+        height: 100px;
+        background: #F5F8FA 0% 0% no-repeat padding-box;
+        opacity: 1;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+      
+        .mycard {
+          display: inline-block;
+          min-width: 200px;
+          margin-top: 30px;
+          margin-left: 5px;
+        }
+      }
+}
+
+.title {
+    font: SemiBold 46px/57px Montserrat;
+    letter-spacing: 0;
+    color: #394E5D;
+    opacity: 1;
+}
+
+.subtitle {
+    font: Regular 22px/27px Montserrat;
+    letter-spacing: 0;
+    color: #394E5D;
+    opacity: 1;
+} 
+
+.myintro-description h5 {
+    text-align: left;
+    font: Bold 20px/24px Montserrat;
+    letter-spacing: 0;
+    color: #394E5D;
+    opacity: 1;
+}
+
+.myintro-description p {
+    text-align: left;
+    font: Regular 18px/33px Montserrat;
+    letter-spacing: 0;
+    color: #182333;
+    opacity: 1;
+}
+
+  
