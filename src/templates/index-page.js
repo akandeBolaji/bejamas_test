@@ -5,10 +5,11 @@ import Img from 'gatsby-image';
 import "../styles/home.scss";
 import { Remarkable } from 'remarkable';
 import { Link } from "gatsby";
+import { BlogPostTemplate } from './blog-post'
 
 import Layout from '../components/Layout'
 
-export function IndexPageTemplate({data}) {
+export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
   const md =  new Remarkable();
   const markdown = md.render(data.intro.description);
   console.log(markdown);
@@ -63,12 +64,16 @@ export function IndexPageTemplate({data}) {
       <div className="scrolling-wrapper">
       {data.logos.map(logo => (
         <p className="mycard" key={logo.link}>
-          <a className="link" ><img className="level-image" src={logo.image} alt="logo" /></a>
+          <a href={logo.link} className="link" ><img className="level-image" src={logo.image} alt="logo" /></a>
         </p>
        ))}
       </div>
       </div>
       )}
+        <BlogPostTemplate articleDesktop={articleDesktop} articleMobile={articleMobile}/> 
+        <div className="mybutton">
+          <button className="button is-rounded"><span className="mybutton-text">Read More</span></button>
+        </div>
       </div>
     </>
   ) 
@@ -78,10 +83,11 @@ IndexPageTemplate.propTypes = {}
 
 function IndexPage(props) {
   const { frontmatter: home } = props.data.allMarkdownRemark.edges[0].node;
-  console.log(props);
+  const  articleDesktop  = props.data.articleDesktop.edges;
+  const  articleMobile  = props.data.articleMobile.edges;
   return (
     <Layout navbarData={props.data.navbarData} footerData={props.data.footerData} presentRoute="Home">
-      <IndexPageTemplate data={home}/> 
+      <IndexPageTemplate data={home} articleDesktop={articleDesktop} articleMobile={articleMobile}/> 
     </Layout>
   )
 }
@@ -134,6 +140,42 @@ export const pageQuery = graphql`
       }
     }
     ...LayoutFragment
+    articleDesktop: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}, sort: {order: DESC, fields: frontmatter___date} , limit: 4) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            excerpt
+            featuredimage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    articleMobile: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "blog-post"}}}, sort: {order: DESC, fields: frontmatter___date} , limit: 2) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            excerpt
+            featuredimage {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 `;
 

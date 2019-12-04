@@ -1,23 +1,50 @@
 @import "./bulma.scss";
 
 @media screen and (min-width: 1088px) {
-.myhero-heading {
-    margin-top: 10%;
-    margin-left: 18%;
+    .mybutton {
+        margin-top: 50px;
+        margin-bottom: 150px;
+        text-align: center;
     }
-     
-.myhero-image img {
-    margin-right: 5%;
-    margin-top: 5%;
-    max-height: 371px;;
-    max-width: 384px;
- } 
 
- .myintro-image img {
-    max-height: 370px;;
-    max-width: 236px;
-    margin-left: 45%;
- } 
+    .mybutton-text {
+        font: SemiBold 14px/27px Montserrat;
+        letter-spacing: 0;
+        color: #4285BC;
+        opacity: 1;
+    }
+
+    button {
+        background: #FFFFFF 0% 0% no-repeat padding-box !important;
+        border: 1px solid #3D86BF !important;
+        border-radius: 32px !important;
+    }
+
+    button:hover {
+        background: #4285BC 0% 0% no-repeat padding-box !important;
+        border-radius: 32px !important;
+        .mybutton-text {
+            color: #FFFFFF;
+        }
+    }
+
+    .myhero-heading {
+        margin-top: 10%;
+        margin-left: 18%;
+        }
+        
+    .myhero-image img {
+        margin-right: 5%;
+        margin-top: 5%;
+        max-height: 371px;;
+        max-width: 384px;
+    } 
+
+    .myintro-image img {
+        max-height: 370px;;
+        max-width: 236px;
+        margin-left: 45%;
+    } 
 
  .myintro-description {
     margin: 4%;
@@ -32,6 +59,7 @@
         max-height: 420px;
     }
     .level {
+        margin-top: 80px;
         height: 100px;
         background: #F5F8FA 0% 0% no-repeat padding-box;
         opacity: 1;
@@ -61,6 +89,33 @@
 
 
 @media screen and (max-width: 1088px) {
+    .mybutton {
+        margin-top: 50px;
+        margin-bottom: 100px;
+        text-align: center;
+    }
+
+    .mybutton-text {
+        font: SemiBold 14px/27px Montserrat;
+        letter-spacing: 0;
+        color: #4285BC;
+        opacity: 1;
+    }
+
+    button {
+        background: #FFFFFF 0% 0% no-repeat padding-box !important;
+        border: 1px solid #3D86BF !important;
+        border-radius: 32px !important;
+    }
+
+    button:hover {
+        background: #4285BC 0% 0% no-repeat padding-box !important;
+        border-radius: 32px !important;
+        .mybutton-text {
+            color: #FFFFFF;
+        }
+    }
+
     .myhero-heading {
         margin-left: 10%;
         margin-top: 15%;

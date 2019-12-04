@@ -1,0 +1,75 @@
+@import "./bulma.scss";
+
+
+
+@media screen and (min-width: 1088px) {
+    .myblog-image img {
+        max-height: 144px;;
+        max-width: 282px;
+     } 
+
+     .fordesktop {
+         margin-top: 80px;
+         margin-left: 7%;
+         min-height: 400px; 
+     }
+
+     .formobile {
+        display: none !important;
+    }
+
+    .blog-title {
+        min-height: 120px;
+    }
+
+    .myblog {
+        transition: box-shadow .3s;
+    }
+
+    .myblog:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+    }
+}
+
+@media screen and (max-width: 1088px) {
+    .fordesktop {
+        display: none !important;
+    }
+
+    .myblog-image img {
+        max-height: 169px;;
+        max-width: 334px;
+        padding: 0 !important;
+     } 
+
+     .formobile {
+         margin-top: 80px;
+         margin-left: 8%;
+     }
+
+     .myblog {
+        transition: box-shadow .3s;
+        margin-bottom: 50px;
+    }
+
+    .myblog:hover {
+        box-shadow: 0 0 11px rgba(33,33,33,.2);
+    }
+
+
+}
+
+.blog-title {
+    font: SemiBold 20px/27px Montserrat;
+    letter-spacing: 0;
+    color: #394E5D;
+    opacity: 1;
+ }
+
+ .blog-excerpt {
+    margin-bottom: 10px;
+    font: Regular 16px/19px Montserrat;
+    letter-spacing: 0;
+    color: #182333;
+    opacity: 1;
+ }
