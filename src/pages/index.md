@@ -1,6 +1,7 @@
 ---
 templateKey: index-page
 title: Home
+button: Read more
 hero:
   heading: Start New… Today!
   image: /uploads/56256.jpg
