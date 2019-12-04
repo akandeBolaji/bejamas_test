@@ -72,7 +72,7 @@ export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
       )}
         <BlogPostTemplate articleDesktop={articleDesktop} articleMobile={articleMobile}/> 
         <div className="mybutton">
-          <button className="button is-rounded"><span className="mybutton-text">Read More</span></button>
+          <button className="button is-rounded"><span className="mybutton-text">{data.button}</span></button>
         </div>
       </div>
     </>
@@ -109,6 +109,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            button
             hero {
               image {
                 childImageSharp {
