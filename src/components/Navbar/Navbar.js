@@ -19,7 +19,7 @@ export const NavbarTemplate = ({ data, active }) => (
         <Link className="navbar-text" to={data.firstLink.link}>
           {data.firstLink.name}
         </Link> 
-        {active == data.firstLink.name && 
+        {active === data.firstLink.name && 
           <span className="icon">
             .
           </span>
@@ -30,7 +30,7 @@ export const NavbarTemplate = ({ data, active }) => (
         <Link className="navbar-text" to={data.secondLink.link}>
         {data.secondLink.name}
         </Link> 
-        {active == data.secondLink.name && 
+        {active === data.secondLink.name && 
           <span className="icon">
             .
           </span>
@@ -46,7 +46,7 @@ export const NavbarTemplate = ({ data, active }) => (
          <Link className="navbar-text" to={data.thirdLink.link}>
         {data.thirdLink.name}
          </Link>
-         {active == data.thirdLink.name && 
+         {active === data.thirdLink.name && 
           <span className="icon">
             .
           </span>
@@ -56,7 +56,7 @@ export const NavbarTemplate = ({ data, active }) => (
         <Link className="navbar-text" to={data.fourthLink.link}>
         {data.fourthLink.name}
       </Link>
-      {active == data.fourthLink.name && 
+      {active === data.fourthLink.name && 
           <span className="icon">
             .
           </span>
