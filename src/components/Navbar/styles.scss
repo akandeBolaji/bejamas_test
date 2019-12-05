@@ -1,23 +1,54 @@
 @import "../../styles/bulma.scss";
 
+.material-icons {
+  font-family: 'Material Icons';
+  font-size: 24px;
+}
+
 @media screen and (min-width: 1088px) {
   .my-navbar {
     display: block !important;
   }
+
   .my-navbar .navbar-brand {
     display: none;
   }
+
   #my-navbar-menu {
     width: 600px;
     margin: 0 auto;
   }
-  #my-navbar-menu>div {
+
+  #my-navbar-menu>div { 
     flex: 1;
   }
+
   #my-navbar-menu>div>div {
     flex: 1;
     justify-content: center;
   }
+
+  .mynavbar-test {
+    display: inline !important;
+  
+    svg {
+    text-align: center;
+    width: 14px;
+    height: 7px;
+    color: #4285BC;
+    display: block;
+    margin: auto;
+    }
+  
+    .mymobile {
+      display: none;
+    } 
+
+    .hidden {
+      visibility: hidden;
+    }
+  }
+  
 }
 
 @media screen and (max-width: 1088px) { 
@@ -30,6 +61,27 @@
         position: fixed;
         padding-top: 35%;
         padding-left: 10%;
+    }
+
+    .mynavbar-test {
+      //display: inline !important;
+    
+      svg {
+      //text-align: center;
+      width: 14px;
+      height: 7px;
+      color: #4285BC;
+      //display: block;
+      //margin: auto;
+      }
+
+      .mydesktop {
+        display: none;
+      } 
+    
+      .hidden {
+        visibility: hidden;
+      } 
     }
  
 }
@@ -57,3 +109,5 @@
   }
 
 }
+
+
