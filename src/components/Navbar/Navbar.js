@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "gatsby";
-
+import {
+  FaCircle
+} from 'react-icons/fa';
+ 
 import "./styles.scss";
 
 export const NavbarTemplate = ({ data, active }) => (
@@ -15,26 +18,23 @@ export const NavbarTemplate = ({ data, active }) => (
     </div>
     <div id="my-navbar-menu" className="navbar-menu ">
     <div className="navbar-start">
-      <div className="navbar-item">
+      <div className="mynavbar-item navbar-item">
+      <div className="mynavbar-test">
+      <FaCircle className={"mymobile " + (active === data.firstLink.name ? 'mynavbar-icon' : 'hidden')} />
         <Link className="navbar-text" to={data.firstLink.link}>
           {data.firstLink.name}
-        </Link> 
-        {active === data.firstLink.name && 
-          <span className="icon">
-            .
-          </span>
-        } 
-    
+        </Link>
+         <FaCircle className={"mydesktop " + (active === data.firstLink.name ? 'mynavbar-icon' : 'hidden')} />
+        </div>
       </div>
-      <div className="navbar-item">
+      <div className="mynavbar-item navbar-item"> 
+      <div className="mynavbar-test">
+      <FaCircle className={"mymobile " + (active === data.secondLink.name ? 'mynavbar-icon' : 'hidden')} />
         <Link className="navbar-text" to={data.secondLink.link}>
-        {data.secondLink.name}
-        </Link> 
-        {active === data.secondLink.name && 
-          <span className="icon">
-            .
-          </span>
-        }  
+          {data.secondLink.name}
+        </Link>
+        <FaCircle className={"mydesktop " +  (active === data.secondLink.name ? 'mynavbar-icon' : 'hidden')} />
+        </div>
       </div>
     </div>
     <div className="my-navbar-center">
@@ -42,25 +42,23 @@ export const NavbarTemplate = ({ data, active }) => (
       </div>
     </div>
     <div className="navbar-end">
-      <div className="navbar-item">
-         <Link className="navbar-text" to={data.thirdLink.link}>
-        {data.thirdLink.name}
-         </Link>
-         {active === data.thirdLink.name && 
-          <span className="icon">
-            .
-          </span>
-        } 
+      <div className="mynavbar-item navbar-item">
+      <div className="mynavbar-test">
+      <FaCircle className={"mymobile " + (active === data.thirdLink.name ? 'mynavbar-icon' : 'hidden')} />
+        <Link className="navbar-text" to={data.thirdLink.link}>
+          {data.thirdLink.name}
+        </Link>
+        <FaCircle className={"mydesktop " + (active === data.thirdLink.name ? 'mynavbar-icon' : 'hidden')} />
+        </div>
       </div>
-      <div className="navbar-item">
+      <div className="mynavbar-item navbar-item">
+      <div className="mynavbar-test">
+      <FaCircle className={"mymobile " + (active === data.fourthLink.name ? 'mynavbar-icon' : 'hidden')} />
         <Link className="navbar-text" to={data.fourthLink.link}>
-        {data.fourthLink.name}
-      </Link>
-      {active === data.fourthLink.name && 
-          <span className="icon">
-            .
-          </span>
-        } 
+          {data.fourthLink.name}
+        </Link>
+        <FaCircle className={"mydesktop " + (active === data.fourthLink.name ? 'mynavbar-icon' : 'hidden')} />
+        </div>
       </div>
     </div>
   </div>
