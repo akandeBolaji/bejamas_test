@@ -24,20 +24,20 @@
   }
 
   #my-navbar-menu>div>div {
-    flex: 1;
-    justify-content: center;
+      flex: 1;
+      justify-content: center;
   }
 
   .mynavbar-test {
-    display: inline !important;
+      display: inline !important;
   
     svg {
-    text-align: center;
-    width: 14px;
-    height: 7px;
-    color: #4285BC;
-    display: block;
-    margin: auto;
+      text-align: center;
+      width: 14px;
+      height: 7px;
+      color: #4285BC;
+      display: block;
+      margin: auto;
     }
   
     .mymobile {
@@ -64,15 +64,10 @@
     }
 
     .mynavbar-test {
-      //display: inline !important;
-    
       svg {
-      //text-align: center;
-      width: 14px;
-      height: 7px;
-      color: #4285BC;
-      //display: block;
-      //margin: auto;
+        width: 14px;
+        height: 7px;
+        color: #4285BC;
       }
 
       .mydesktop {

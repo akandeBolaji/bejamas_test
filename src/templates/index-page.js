@@ -4,15 +4,33 @@ import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import "../styles/home.scss";
 import { Remarkable } from 'remarkable';
-import { Link } from "gatsby";
 import { BlogPostTemplate } from './blog-post'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 
 import Layout from '../components/Layout'
 
 export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 3,
+      slidesToSlide: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 3,
+      slidesToSlide: 3,
+    },
+  };
   const md =  new Remarkable();
   const markdown = md.render(data.intro.description);
-  console.log(markdown);
   return (
     <>
     <div>
@@ -41,7 +59,7 @@ export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
         <div className="myintro-title">
           {data.intro.heading}
         </div>
-        <div className="container columns">
+        <div className="columns">
         <div className="myintro-image column">
             <Img
                 fluid={data.intro.image.childImageSharp.fluid}
@@ -61,17 +79,29 @@ export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
         </p>
        ))}
       </div>
-      <div className="scrolling-wrapper">
-      {data.logos.map(logo => (
-        <p className="mycard" key={logo.link}>
-          <a href={logo.link} className="link" ><img className="level-image" src={logo.image} alt="logo" /></a>
-        </p>
-       ))}
-      </div>
+      <Carousel
+        swipeable={false}
+        draggable={false}
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={3000}
+        keyBoardControl={false}
+        transitionDuration={500}
+        containerClass="scrolling-wrapper"
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        itemClass="mycard"
+      >
+        {data.logos.map(logo => (
+          <p key={logo.link}>
+            <a href={logo.link} className="link" ><img className="level-image" src={logo.image} alt="logo" /></a>
+          </p>
+        ))}
+      </Carousel>
       </div>
       )}
         <BlogPostTemplate articleDesktop={articleDesktop} articleMobile={articleMobile}/> 
-        <div className="mybutton">
+        <div className="mybutton"> 
           <button className="button is-rounded"><span className="mybutton-text">{data.button}</span></button>
         </div>
       </div>

@@ -78,7 +78,6 @@ const Navbar = props => {
     return null;
   }
   const data = props.data.edges[0].node.frontmatter;
-   console.log(data);
   return <NavbarTemplate data={data} active={props.active} />;
 };
 

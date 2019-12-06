@@ -46,9 +46,9 @@
         margin-left: 45%;
     } 
 
- .myintro-description {
-    margin: 4%;
-  }
+    .myintro-description {
+        margin: 4%;
+    }
 
     .mylogo {
         background: #F5F8FA 0% 0% no-repeat padding-box;
@@ -84,7 +84,6 @@
     letter-spacing: 0;
     color: #394E5D;
     opacity: 1;
-    //margin: 2%;
 }
 
 
@@ -111,6 +110,7 @@
     button:hover {
         background: #4285BC 0% 0% no-repeat padding-box !important;
         border-radius: 32px !important;
+        
         .mybutton-text {
             color: #FFFFFF;
         }
@@ -135,27 +135,25 @@
     }
 
     .myintro-title {
-        margin-left: 10%;
-        margin-right: 10%;
+        text-align: center;
+        margin-bottom: 50px;
     }
     .myintro-description {
         margin-left: 10%;
         margin-right: 10%;
+        margin-bottom: 80px;
     }
 
     .scrolling-wrapper {
         height: 100px;
         background: #F5F8FA 0% 0% no-repeat padding-box;
         opacity: 1;
-        overflow-x: scroll;
-        overflow-y: hidden;
         white-space: nowrap;
       
         .mycard {
           display: inline-block;
           min-width: 200px;
-          margin-top: 30px;
-          margin-left: 5px;
+          margin: auto;
         }
       }
 }
