@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { BlogPostTemplate } from "../../templates/index-page";
+import { BlogPostTemplate } from "../../templates/blog-post";
 
-const BlogPagePreview = ({ entry }) => {
+const BlogPagePreview = ({entry}) => {
   const home = entry.getIn(["data"]).toJS();
   return <BlogPostTemplate articleDesktop={home} />;
 };

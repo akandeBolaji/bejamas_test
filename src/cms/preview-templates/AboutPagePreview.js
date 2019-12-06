@@ -3,11 +3,11 @@ import PropTypes from "prop-types";
 
 import { AboutPageTemplate } from "../../templates/about-page";
 
-const HomePagePreview = ({ entry }) => {
+const AboutPagePreview = () => {
   return <AboutPageTemplate />;
 };
 
-HomePagePreview.propTypes = {
+AboutPagePreview.propTypes = {
   entry: PropTypes.shape({
     getIn: PropTypes.func,
   }),

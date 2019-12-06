@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ContactTemplate } from "../../templates/contact-page";
+import { ContactPageTemplate } from "../../templates/contact-page";
 
-const ContactPagePreview = ({ entry }) => {
-  return <ContactTemplate />;
+const ContactPagePreview = () => {
+  return <ContactPageTemplate />;
 };
 
 ContactPagePreview.propTypes = {

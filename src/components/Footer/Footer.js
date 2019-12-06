@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "gatsby";
 
 import "./styles.scss";
 
@@ -15,7 +14,6 @@ const Footer = props => {
     return null;
   }
   const data = props.data.edges[0].node.frontmatter;
-   console.log(data);
   return <FooterTemplate data={data} />;
 };
 
