@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ProductTemplate } from "../../templates/products-page";
+import { ProductsPageTemplate } from "../../templates/products-page";
 
-const ProductPagePreview = ({ entry }) => {
-  return <ProductTemplate />;
+const ProductPagePreview = () => {
+  return <ProductsPageTemplate />;
 };
 
 ProductPagePreview.propTypes = {

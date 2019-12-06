@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 import Img from 'gatsby-image';
 import "../styles/home.scss";
 import { Remarkable } from 'remarkable';
-import { Link } from "gatsby";
 import { BlogPostTemplate } from './blog-post'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -17,17 +16,17 @@ export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
       items: 3,
-      slidesToSlide: 3, // optional, default to 1.
+      slidesToSlide: 3,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
-      items: 2,
-      slidesToSlide: 2, // optional, default to 1.
+      items: 3,
+      slidesToSlide: 2,
     },
     mobile: {
       breakpoint: { max: 464, min: 0 },
       items: 3,
-      slidesToSlide: 3, // optional, default to 1.
+      slidesToSlide: 3,
     },
   };
   const md =  new Remarkable();
@@ -93,11 +92,11 @@ export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
         removeArrowOnDeviceType={["tablet", "mobile"]}
         itemClass="mycard"
       >
-      {data.logos.map(logo => (
-        <p key={logo.link}>
-          <a href={logo.link} className="link" ><img className="level-image" src={logo.image} alt="logo" /></a>
-        </p>
-       ))}
+        {data.logos.map(logo => (
+          <p key={logo.link}>
+            <a href={logo.link} className="link" ><img className="level-image" src={logo.image} alt="logo" /></a>
+          </p>
+        ))}
       </Carousel>
       </div>
       )}

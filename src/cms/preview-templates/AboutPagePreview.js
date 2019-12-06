@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { AboutPageTemplate } from "../../templates/about-page";
 
-const AboutPagePreview = ({ entry }) => {
+const AboutPagePreview = () => {
   return <AboutPageTemplate />;
 };
 
