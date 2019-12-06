@@ -8,7 +8,6 @@ import { Footer } from "../components/Footer";
 import { useSiteMetadata } from '../lib/hooks'
 
 function Layout(props) {
-  console.log(props)
   const { title: defaultTitle, description: defaultDescription } = useSiteMetadata()
   const title = props.title || defaultTitle
   const description = props.description || defaultDescription

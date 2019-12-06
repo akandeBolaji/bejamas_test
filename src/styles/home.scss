@@ -84,7 +84,6 @@
     letter-spacing: 0;
     color: #394E5D;
     opacity: 1;
-    //margin: 2%;
 }
 
 
@@ -135,12 +134,13 @@
     }
 
     .myintro-title {
-        margin-left: 10%;
-        margin-right: 10%;
+        text-align: center;
+        margin-bottom: 50px;
     }
     .myintro-description {
         margin-left: 10%;
         margin-right: 10%;
+        margin-bottom: 80px;
     }
 
     .scrolling-wrapper {

@@ -12,7 +12,6 @@ import Layout from '../components/Layout'
 export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
   const md =  new Remarkable();
   const markdown = md.render(data.intro.description);
-  console.log(markdown);
   return (
     <>
     <div>
@@ -41,7 +40,7 @@ export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
         <div className="myintro-title">
           {data.intro.heading}
         </div>
-        <div className="container columns">
+        <div className="columns">
         <div className="myintro-image column">
             <Img
                 fluid={data.intro.image.childImageSharp.fluid}
@@ -71,7 +70,7 @@ export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
       </div>
       )}
         <BlogPostTemplate articleDesktop={articleDesktop} articleMobile={articleMobile}/> 
-        <div className="mybutton">
+        <div className="mybutton"> 
           <button className="button is-rounded"><span className="mybutton-text">{data.button}</span></button>
         </div>
       </div>
