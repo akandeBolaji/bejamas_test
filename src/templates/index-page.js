@@ -6,10 +6,30 @@ import "../styles/home.scss";
 import { Remarkable } from 'remarkable';
 import { Link } from "gatsby";
 import { BlogPostTemplate } from './blog-post'
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
+
 
 import Layout from '../components/Layout'
 
 export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3, // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2, // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 3,
+      slidesToSlide: 3, // optional, default to 1.
+    },
+  };
   const md =  new Remarkable();
   const markdown = md.render(data.intro.description);
   return (
@@ -60,13 +80,25 @@ export function IndexPageTemplate({data, articleDesktop, articleMobile}) {
         </p>
        ))}
       </div>
-      <div className="scrolling-wrapper">
+      <Carousel
+        swipeable={false}
+        draggable={false}
+        responsive={responsive}
+        infinite={true}
+        autoPlay={true}
+        autoPlaySpeed={3000}
+        keyBoardControl={false}
+        transitionDuration={500}
+        containerClass="scrolling-wrapper"
+        removeArrowOnDeviceType={["tablet", "mobile"]}
+        itemClass="mycard"
+      >
       {data.logos.map(logo => (
-        <p className="mycard" key={logo.link}>
+        <p key={logo.link}>
           <a href={logo.link} className="link" ><img className="level-image" src={logo.image} alt="logo" /></a>
         </p>
        ))}
-      </div>
+      </Carousel>
       </div>
       )}
         <BlogPostTemplate articleDesktop={articleDesktop} articleMobile={articleMobile}/> 
