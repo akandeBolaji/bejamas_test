@@ -94,7 +94,7 @@ collections:
 
       - file: 'src/pages/blogs/index.md'
         label: 'Blog Page'
-        name: 'blog'
+        name: 'blogs'
         fields:
           - {
               label: 'Template Key',
